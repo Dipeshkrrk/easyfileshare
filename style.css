@@ -1,0 +1,244 @@
+.card {
+  width: 400px;
+  height: 550px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #000;
+  background-color: #111;
+  border-color: #111;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-top: 5vh;
+}
+
+/*Make Above Card responsive*/
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 95%;
+  }
+}
+
+body {
+  background-color: #000;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+input[type="file"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: #ffffff;
+}
+
+input[type="file"]:focus {
+  border: 3px solid #555;
+}
+
+/* download */
+
+button {
+  height: 63px;
+  border-radius: 10px;
+  background-color: #e50914;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#downimg {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-user-drag: none;
+}
+
+#uping {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 0px solid #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  border-color: #111;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#showunique {
+  width: 200px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#showunique:hover {
+  background-color: #e50914;
+  color: #fff;
+  border-color: #e50914;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#ShowUniqueID {
+  width: max-content;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+#note {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  color: #fff;
+}
+
+/*  */
+
+.Drop-here {
+  width: 70%;
+  height: 80vh;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 2;
+  margin-left: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  display: none;
+}
+
+#link {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e1e1e;
+  border: 1px solid #e50914;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  white-space: normal;
+  word-wrap: break-word;
+  color: #e50914; /* Netflix red color */
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Netflix font */
+  font-weight: bold; /* Bold font weight */
+}
+
+#link:hover {
+  color: #fff;
+  background-color: #000000;
+  color: #b20710; /* Darker red on hover */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #fff; /* Change background color on hover */
+  color: #212529; /* Change text color on hover */
+}
+
+/* Input field hover effect */
+input[type="text"]:hover,
+input[type="file"]:hover {
+  border: 3px solid #555; /* Change border color on hover */
+}
+
+
