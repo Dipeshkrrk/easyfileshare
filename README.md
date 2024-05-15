@@ -1,4 +1,4 @@
-<h1 align="center" style="font-size:50px;"><a href="https://anyshare.vercel.app">Any Share</a></h1>  
+<h1 align="center" style="font-size:50px;"><a href="https://easyfileshare.vercel.app/">EasyFileShare</a></h1>  
 
 Any Share is a simple, lightweight, and fast file sharing service. It is written in Javascript and uses the [Firebase](https://firebase.google.com/) platform.
 
@@ -24,12 +24,12 @@ Any Share is a simple, lightweight, and fast file sharing service. It is written
 
 ## How to use
 
-<a href="https://anyshare.vercel.app"><img src="https://user-images.githubusercontent.com/80502833/193975789-641c7b56-d7b6-474a-9082-b52335d21c22.png" width=300px height=400px align="center"/></a>
+<a href="https://easyfileshare.vercel.app/"><img src="https://user-images.githubusercontent.com/80502833/193975789-641c7b56-d7b6-474a-9082-b52335d21c22.png" width=300px height=400px align="center"/></a>
 <!-- ![frame_generic_dark (12)](https://user-images.githubusercontent.com/80502833/193975789-641c7b56-d7b6-474a-9082-b52335d21c22.png) -->
 
 
 
-- Visit [Any Share](https://anyshare.vercel.app/).
+- Visit [EasyFileShare](https://easyfileshare.vercel.app/).
 - Upload a file.
 - Wait for the file to be uploaded.
 - Share the unique ID of the file with the receiver.
