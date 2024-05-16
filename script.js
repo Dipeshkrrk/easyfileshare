@@ -69,7 +69,7 @@ function uploadImage() {
               { long_url: downloadURL }, // Remove 'bitlink' from the request body
               {
                 headers: {
-                  Authorization: "Bearer b33d66dce080fcc33d18dff28c846c7566ca49a2",
+                  Authorization: "Bearer a54f798de1f19385ade54f7ac139e3e29b36d369",
                   "Content-Type": "application/json",
                 },
               }
