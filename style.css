@@ -1,6 +1,6 @@
 .card {
   width: 400px;
-  height: 550px;
+  height: 540px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -29,7 +29,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #9b9b9b;
 }
 
 h1 {
@@ -208,19 +208,19 @@ p {
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1e1e1e;
-  border: 1px solid #e50914;
+  background-color: #c6c6c6;
+  border: 1px solid #f1f1f1;
   padding: 10px;
   border-radius: 5px;
   max-width: calc(100% - 20px);
-  overflow: hidden;
-  color: #fff;
+  overflow: hidden; 
   text-decoration: none;
   white-space: normal;
   word-wrap: break-word;
-  color: #e50914; /* Netflix red color */
-  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Netflix font */
-  font-weight: bold; /* Bold font weight */
+  color: #000000; /* Netflix red color */
+  font-family: monospace;
+  font-weight: 100;
+  font-size: smaller;
 }
 
 #link:hover {
@@ -241,4 +241,12 @@ input[type="file"]:hover {
   border: 3px solid #555; /* Change border color on hover */
 }
 
-
+#qrcode {
+  width:100px;
+  height:100px;
+  margin-top:15px;
+}
+#qr{
+  bottom:0;
+  padding-top: 105px;
+}

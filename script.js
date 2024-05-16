@@ -49,9 +49,9 @@ function uploadImage() {
     uploadTask.on(
       "state_changed",
       function (snapshot) {
-        var progress = (snapshot.bytesTransferred / snapshot.totalBytes * 100).toFixed(2);
+        var progress = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100).toFixed(2);
         console.log("Upload is " + progress + "% done");
-        document.getElementById("upload").innerHTML = "Uploading"+" "+progress+"%...";
+        document.getElementById("upload").innerHTML = "Uploading " + progress + "%...";
       },
       function (error) {
         console.log(error.message);
@@ -61,10 +61,52 @@ function uploadImage() {
         uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
           console.log("File available at", downloadURL);
           saveMessage(downloadURL);
-          var dis=document.getElementById("link");
-          dis.style.display= 'block';
-          dis.innerText=downloadURL;
-          dis.href=downloadURL;
+
+          // Axios request for shortening URL with Bitly and generating QR code
+          axios
+            .post(
+              "https://api-ssl.bitly.com/v4/shorten",
+              { long_url: downloadURL }, // Remove 'bitlink' from the request body
+              {
+                headers: {
+                  Authorization: "Bearer b33d66dce080fcc33d18dff28c846c7566ca49a2",
+                  "Content-Type": "application/json",
+                },
+              }
+            )
+            .then(function (response) {
+              var shortURL = response.data.link;
+              console.log("Shortened URL:", shortURL);
+
+              // Display the shortened URL
+              var dis = document.getElementById("link");
+              dis.style.display = "block";
+              dis.innerText = shortURL;
+              dis.href = shortURL;
+
+              // Generate QR code for the shortened URL
+              var qrCodeDiv = document.getElementById("qrcode");
+              qrCodeDiv.style.display = "block";
+              qrCodeDiv.innerHTML = ""; // Clear previous QR code if any
+              var qrCode = new QRCode(qrCodeDiv, {
+                text: shortURL,
+                width: 120,
+                height: 120,
+              });
+
+              // Create and append Upload More button
+              var uploadMoreBtn = document.createElement("button");
+              uploadMoreBtn.innerText = "Upload More";
+              uploadMoreBtn.addEventListener("click", function () {
+                // Redirect to home page or desired URL
+                window.location.href = "https://easyfileshare.vercel.app/"; // Replace example.com with your home page URL
+              });
+              document.getElementById("qr").appendChild(uploadMoreBtn);
+            })
+            .catch(function (error) {
+              console.error("Error shortening URL:", error);
+              // Handle error (e.g., display error message to user)
+            });
         });
       }
     );
@@ -77,6 +119,8 @@ function uploadImage() {
     }, 2000);
   }
 }
+
+
 
 
 
